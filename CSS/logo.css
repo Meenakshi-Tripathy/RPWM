@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100&display=swap');
+
+.logo {
+  display: inline-block;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 34px;
+  padding: 10px 5px;
+  border: 1px solid black;
+}

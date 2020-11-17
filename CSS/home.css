@@ -1,0 +1,554 @@
+/* Root Element & Body styles */
+:root {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 16px;
+
+}
+
+body {
+  width: 100%;
+  background-color: #f5f5f5;
+}
+
+/* Hard margin/padding reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Hard reset the images */
+img {
+  height: 100%;
+  width: 100%;
+}
+
+/* Hard reset "a" tags */
+a {
+  color: black;
+}
+
+/* Create the main container */
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/* Create the navbar */
+.main-container .navbar {
+  background-color: white;
+  padding: 0px 10px;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+}
+
+.main-container .navbar li, .main-container .navbar a {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: black;
+  text-decoration: none;
+  transition: 250ms;
+}
+
+.main-container .navbar a:hover {
+  color: #38A0A3;
+}
+
+/* Create the Showcase */
+.main-container .showcase {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 100px);
+  background-image: url(../Images/Home-Images/Home-Showcase.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+  min-height: 400px;
+}
+
+.main-container .showcase h1 {
+  color: white;
+  text-transform: uppercase;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px 15px;
+  border: 5px solid white;
+}
+
+/* Create the content */
+.main-container .content {
+  width: 100%;
+  margin: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create the featured carasouel */
+.main-container .content .featured-container {
+  background-color: white;
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+  transition: 250ms;
+}
+
+.main-container .content .featured-container:hover {
+  transform: scale(1.025);
+}
+
+.main-container .content .featured-container .featured-slider {
+  position: absolute;
+  width: 500%;
+  height: 100%;
+  animation-name: slide;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+}
+
+.main-container .content .featured-container .featured {
+  width: 20%;
+  height: 100%;
+  float: left;
+}
+
+.main-container .content .featured-container .featured img {
+  width: 50%;
+  height: 100%;
+  float: left;
+  object-fit: cover;
+  object-position: center;
+
+}
+
+.main-container .content .featured-container .featured .text-section-container {
+  display: flex;
+  width: 50%;
+  height: 100%;
+  float: left;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container .content .featured-container .featured .text-section-container .text-section {
+  width: 75%;
+  height: auto;
+  text-align: center;
+}
+
+.main-container .content .featured-container .featured .text-section-container .text-section h3 {
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.main-container .content .featured-container .featured .text-section-container .text-section p {
+  width: 80%;
+  margin: auto;
+  line-height: 1.8em;
+  letter-spacing: 1px;
+
+}
+
+@keyframes slide {
+  0% {transform: translate(0%, 0%)}
+  20% {transform: translate(0%, 0%)}
+  25% {transform: translate(-20%, 0%)}
+  45% {transform: translate(-20%, 0%)}
+  50% {transform: translate(-40%, 0%)}
+  70% {transform: translate(-40%, 0%)}
+  75% {transform: translate(-60%, 0%)}
+  95% {transform: translate(-60%, 0%)}
+  100% {transform: translate(-80%, 0%)}
+}
+
+/* Create the blog descriptions */
+.main-container .content .blog-desciptions {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-container .content .blog-desciptions a {
+  color: blue;
+  text-decoration: none;
+}
+
+.main-container .content .blog-desciptions a:hover {
+  text-decoration: underline;
+}
+
+/* Create the about me section */
+.main-container .content .about-me {
+  background-color: white;
+  width: calc(50% - 25px);
+  height: 700px;
+  margin-top: 50px;
+  margin-right: 25px;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+  overflow: hidden;
+}
+
+.main-container .content .about-me .image-container {
+  display: flex;
+  height: 50%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container .content .about-me .image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.main-container .content .about-me .desciption-text-container {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container .content .about-me .desciption-text-container .description-text {
+  text-align: center;
+  width: 60%;
+}
+
+.main-container .content .about-me .desciption-text-container .description-text h3 {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.main-container .content .about-me .desciption-text-container .description-text p {
+  line-height: 1.8em;
+  letter-spacing: 1px;
+}
+
+/* Create the about blog section */
+.main-container .content .about-blog {
+  background-color: white;
+  width: calc(50% - 25px);
+  height: 700px;
+  margin-top: 50px;
+  margin-left: 25px;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+  overflow: hidden;
+}
+
+.main-container .content .about-blog .image-container {
+  height: 50%;
+  width: 100%;
+}
+
+.main-container .content .about-blog .image-container {
+  display: flex;
+  height: 50%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container .content .about-blog .image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.main-container .content .about-blog .desciption-text-container {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container .content .about-blog .desciption-text-container .description-text {
+  text-align: center;
+  width: 60%;
+}
+
+.main-container .content .about-blog .desciption-text-container .description-text h3 {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.main-container .content .about-blog .desciption-text-container .description-text p {
+  line-height: 1.8em;
+  letter-spacing: 1px;
+}
+
+/* Create the Footer */
+.main-container .footer {
+  display: flex;
+  width: 100%;
+  background-color: white;
+  height: 50px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+}
+
+.main-container .footer p {
+  font-size: 11px;
+}
+
+/* Media Queries */
+@media (max-width: 500px) {
+
+  /* Navbar */
+  .main-container .navbar li, .main-container .navbar a {
+    font-size: 0.9em;
+  }
+
+  /* Footer */
+  .main-container .footer {
+    font-size: 0.8em;
+  }
+
+}
+
+@media (max-width: 1150px) {
+
+  /* About me section */
+  .main-container .content .about-me .desciption-text-container .description-text h3 {
+    font-size: 0.8em;
+  }
+
+  .main-container .content .about-me .desciption-text-container .description-text p {
+    font-size: 0.8em;
+  }
+
+  /* About Blog section */
+  .main-container .content .about-blog .desciption-text-container .description-text h3 {
+    font-size: 0.8em;
+  }
+
+  .main-container .content .about-blog .desciption-text-container .description-text p {
+    font-size: 0.8em;
+  }
+
+}
+
+
+
+@media (max-width: 900px) {
+
+  /* About me section */
+  .main-container .content .about-me .desciption-text-container .description-text h3 {
+    font-size: 0.65em;
+  }
+
+  .main-container .content .about-me .desciption-text-container .description-text p {
+    font-size: 0.65em;
+  }
+
+  /* About Blog section */
+  .main-container .content .about-blog .desciption-text-container .description-text h3 {
+    font-size: 0.65em;
+  }
+
+  .main-container .content .about-blog .desciption-text-container .description-text p {
+    font-size: 0.65em;
+  }
+
+  /* Featured carasouel */
+  .main-container .content .featured-container {
+    height: 375px;
+  }
+
+  .main-container .content .featured-container .featured img {
+    width: 100%;
+    height: 70%;
+  }
+
+  .main-container .content .featured-container .featured .text-section-container {
+    width: 100%;
+    height: 30%;
+
+  }
+
+  .main-container .content .featured-container .featured .text-section-container .text-section h3 {
+    letter-spacing: 2px;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .main-container .content .featured-container .featured .text-section-container .text-section p {
+    display: none;
+  }
+
+}
+
+@media (max-width: 850px) {
+
+  /* Blog Descriptions */
+  .main-container .content .blog-desciptions {
+    background-color: white;
+    margin-top: 50px;
+    padding: 0px 50px 0px 50px;
+    padding-bottom: 50px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+  }
+
+  /* About me section */
+  .main-container .content .about-me {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 25px;
+    height: auto;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .main-container .content .about-me .image-container {
+    height: auto;
+    margin-bottom: 25px;
+  }
+
+  .main-container .content .about-me .image-container img {
+    width: 25vw;
+    height: 25vw;
+    align-self: flex-end;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+  }
+
+  .main-container .content .about-me .desciption-text-container {
+    align-items: flex-start;
+    height: auto;
+  }
+
+  .main-container .content .about-me .desciption-text-container .description-text {
+    width: 90%;
+  }
+
+  .main-container .content .about-me .desciption-text-container .description-text h3 {
+    font-size: 0.6em;
+  }
+
+  .main-container .content .about-me .desciption-text-container .description-text p {
+    font-size: 0.6em;
+  }
+
+  /* About blog section */
+  .main-container .content .about-blog {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 25px;
+    height: auto;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .main-container .content .about-blog .image-container {
+    order: 1;
+    height: auto;
+    margin-bottom: 25px;
+  }
+
+  .main-container .content .about-blog .image-container img {
+    width: 25vw;
+    height: 25vw;
+    align-self: flex-end;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+  }
+
+  .main-container .content .about-blog .desciption-text-container {
+    order: 2;
+    align-items: flex-start;
+    height: auto;
+  }
+
+  .main-container .content .about-blog .desciption-text-container .description-text {
+    width: 90%;
+  }
+
+  .main-container .content .about-blog .desciption-text-container .description-text h3 {
+    font-size: 0.6em;
+  }
+
+  .main-container .content .about-blog .desciption-text-container .description-text p {
+    font-size: 0.6em;
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  /* About me section */
+  .main-container .content .about-me {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .main-container .content .about-me .desciption-text-container .description-text {
+    width: 80%;
+  }
+
+
+  /* About Blog section */
+  .main-container .content .about-blog {
+    width: 100%;
+    margin-left: 0;
+
+  }
+
+  .main-container .content .about-blog .desciption-text-container .description-text {
+    width: 80%;
+  }
+
+  .main-container .content .about-blog .desciption-text-container .description-text h3 {
+    font-size: 0.55em;
+  }
+
+  .main-container .content .about-blog .desciption-text-container .description-text p {
+    font-size: 0.55em;
+  }
+
+}
+
+@media (max-width: 500px) {
+  /* About me section */
+  .main-container .content .about-me .desciption-text-container .description-text {
+    width: 100%;
+  }
+
+  .main-container .content .about-me .desciption-text-container .description-text h3 {
+    font-size: 0.55em;
+  }
+
+  .main-container .content .about-me .desciption-text-container .description-text p {
+    font-size: 0.55em;
+  }
+
+  /* About Blog section */
+  .main-container .content .about-blog .desciption-text-container .description-text {
+    width: 100%;
+  }
+
+  .main-container .content .about-blog .desciption-text-container .description-text h3 {
+    font-size: 0.55em;
+  }
+
+  .main-container .content .about-blog .desciption-text-container .description-text p {
+    font-size: 0.55em;
+  }
+
+}
